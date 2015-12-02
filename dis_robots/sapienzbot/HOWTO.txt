@@ -1,0 +1,6 @@
+
+- Download and install ros erratic packages
+- Copy 76-erratic.rules in /etc/udev/rules.d/
+- Connect the sapienzbot and check if /dev/robot_devices/erratic exists
+- roslaunch erratic_player erratic_base.launch (remap the port, since the launch file looks for /dev/erratic) or roslaunch dis_robots erratic.launch (this should be already ok)
+- Check if everything works

@@ -1,0 +1,75 @@
+<launch>
+    <arg name="robot_name" default="turtlebot_2"/>
+    <arg name="init_x" default="11.2" />
+    <arg name="init_y" default="2.4" />
+    <arg name="init_a" default="-1.57" />
+    <arg name="init_cov" default="0.25" />
+    <arg name="robotPort" default="/dev/erratic" />
+    <arg name="laserPort" default="/dev/ttyACM0"/>
+    <arg name="joyPort" default="/dev/input/js0"/>
+    <arg name="laserPort2"/>
+    
+    <param name="robotname" value="$(arg robot_name)" />
+    <param name="robot_name" value="$(arg robot_name)" />
+    
+    <include file="$(find dis_robots)/launch/turtlebot_openni.launch"> 
+        <arg name="device_id" value="#1" />
+        <arg name="camera" value="top" />
+        <arg name="robotname" value="$(arg robot_name)" />
+    </include>
+    
+    <node pkg="tf" type="static_transform_publisher"  ns="$(arg robot_name)" name="offset_top" args="0.05 0 0.3 0 0 0  /$(arg robot_name)/base_link /$(arg robot_name)/top_link 100" /> 
+    
+    <group ns="$(arg robot_name)">  
+        <param name="tf_prefix" value="$(arg robot_name)"/>
+        <param name="emergency_stop" type="int" value="0" />
+        
+        <remap from="cmd_vel" to ="cmd_vel_mux/input/teleop" />
+        <remap from="base_scan" to ="scan" />
+        <remap from="map" to="/map" />        
+        <remap from="static_map" to="/static_map" />
+        <remap from="/mobile_base/commands/velocity" to="/$(arg robot_name)/mobile_base/commands/velocity"/>
+        
+        <node pkg="tf" type="static_transform_publisher" name="link_broadcaster_0" args="0 0 0 0 0 0 /map /$(arg robot_name)/map 100" />
+
+        <include file="$(find dis_robots)/launch/turtlebot_hokuyo_sapienzbot.launch">
+              <arg name="robot_name" value="$(arg robot_name)"/> 
+              <arg name="laserPort" value="$(arg laserPort)"/>
+        </include>
+        
+        <include file="$(find living_at_diag)/config/localization/glocalizer_node.xml" />
+            <param name="glocalizer/initial_pose_x" value="$(arg init_x)" />
+            <param name="glocalizer/initial_pose_y" value="$(arg init_y)" />
+            <param name="glocalizer/initial_pose_a" value="$(arg init_a)" />
+            <param name="glocalizer/initial_cov_xx" value="$(arg init_cov)" />
+            <param name="glocalizer/initial_cov_yy" value="$(arg init_cov)" />
+            <param name="glocalizer/initial_cov_aa" value="$(arg init_cov)" />
+            <param name="glocalizer/laser_topic" value="/$(arg robot_name)/scan" />
+            <param name="glocalizer/odom_frame_id"  value="/$(arg robot_name)/odom" />
+            <param name="glocalizer/base_frame_id"  value="/$(arg robot_name)/base_link" />
+            <param name="glocalizer/global_frame_id"  value="map" />
+        
+        <include file="$(find DemoDIAG)/config/navigation/move_base.xml" />
+                        
+        <node pkg="living_at_diag" name="robotpose_srv" type="getpose" args="-srv" output="screen"/>
+
+        <node pkg="emergency_stop" name="emerg" type="emergency_stop" args="" output="screen"/>
+
+        <node pkg="laser_analysis" type="laserobstacle" args="-gui"  name="laserobstacle" output="screen">
+            <param name="~laser_frame_id" value="laser_frame" />
+        </node>
+
+        <node name="joy_node" pkg="joy" type="joy_node" output="screen" >
+            <param name="~deadzone" type="double" value="0.2"/> 
+            <param name="~autorepeat_rate" type="double" value="20."/> 
+            <param name="~dev" type="str" value="$(arg joyPort)"/>  
+        </node>
+
+        <node name="joy2twist" pkg="human_interface" type="joy2twist.py" output="screen" >
+            <remap from="cmd_vel" to ="desired_cmd_vel" />
+        </node>
+        
+    </group>
+
+</launch>
+

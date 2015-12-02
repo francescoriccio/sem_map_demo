@@ -1,0 +1,5 @@
+string objList
+string objListAtoms
+uint32 index
+---
+string result

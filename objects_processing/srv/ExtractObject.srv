@@ -1,0 +1,6 @@
+string dotFramePath
+string rgbFramePath
+string depthFramePath
+string poseFilePath
+---
+string objectImagePath

@@ -1,0 +1,10 @@
+#goal definition
+string start
+---
+#result definition
+float32 x
+float32 y
+---
+#feedback
+string feedback
+

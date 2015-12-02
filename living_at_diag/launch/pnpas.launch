@@ -1,0 +1,35 @@
+<launch>
+    <arg name="map_name"  default="DIAG_B1"/>
+    <arg name="robot_name" default="robot_0"/>
+    <arg name="plan_name" default="LivingAtDIAG" />
+    <arg name="pnpas" default="living_at_diag_as" />
+    
+    <param name="robotname" value="$(arg robot_name)" />
+    <param name="plan_folder" value="$(find living_at_diag)/plans" />
+    <param name="robot_name" value="$(arg robot_name)" />
+    <param name="emergency_stop" type="int" value="0" />
+    
+    <group ns="$(arg robot_name)">
+    
+        <!-- ACTIONS SERVERS   -->
+            
+        <node pkg="living_at_diag" name="followPerson" type="followPerson.py" output="screen" />
+        <node pkg="living_at_diag" name="getCloser" type="getCloser.py" output="screen" />
+        <node pkg="living_at_diag" name="waitForUser" type="waitForUser.py" output="screen" />
+        
+        <node pkg="rococo_navigation" name="follow_corridor_node" type="follow_corridor_node" args="-server $(arg robot_name)" output="screen" >
+            <remap from="cmd_vel" to ="desired_cmd_vel" />
+        </node>
+        <node pkg="rococo_navigation" name="turn_node" type="turn_node" args="-server $(arg robot_name)" output="screen" >
+            <remap from="cmd_vel" to ="desired_cmd_vel" />
+        </node>
+        
+        <node pkg="living_at_diag" name="$(arg pnpas)" type="$(arg pnpas)" output="screen" />
+
+        <node pkg="pnp_ros" type="pnp_node" name="pnp_node" args="" output="screen">
+            <param name="plan_folder" value="$(find living_at_diag)/plans/" />
+            <param name="current_plan" value="$(arg plan_name)" />
+        </node>
+    </group>
+    
+</launch>

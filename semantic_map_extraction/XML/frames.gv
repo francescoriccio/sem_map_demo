@@ -1,0 +1,12 @@
+digraph G {
+"bigRodent/base_footprint" -> "bigRodent/base_link"[label="Broadcaster: /bigRodent/link_broadcaster_0\nAverage rate: 877.808 Hz\nMost recent transform: 1420716140.881 \nBuffer length: 4.900 sec\n"];
+"bigRodent/odom" -> "bigRodent/base_footprint"[label="Broadcaster: /bigRodent/capybara_name\nAverage rate: 10.209 Hz\nMost recent transform: 1420716140.854 \nBuffer length: 4.800 sec\n"];
+"bigRodent/base_link" -> "bigRodent/base_frame"[label="Broadcaster: /bigRodent/link_broadcaster_2\nAverage rate: 882.387 Hz\nMost recent transform: 1420716140.880 \nBuffer length: 4.900 sec\n"];
+"bigRodent/base_link" -> "bigRodent/laser"[label="Broadcaster: /bigRodent/link_broadcaster_1\nAverage rate: 884.041 Hz\nMost recent transform: 1420716140.892 \nBuffer length: 4.902 sec\n"];
+"map" -> "bigRodent/odom"[label="Broadcaster: /bigRodent/amcl\nAverage rate: 40.087 Hz\nMost recent transform: 1420716140.933 \nBuffer length: 4.889 sec\n"];
+"bigRodent/laser" -> "bigRodent/top_link"[label="Broadcaster: /bigRodent/link_broadcaster_3\nAverage rate: 878.079 Hz\nMost recent transform: 1420716140.881 \nBuffer length: 4.851 sec\n"];
+"camera_link" -> "camera_depth_frame"[label="Broadcaster: /bigRodent/camera_base_link\nAverage rate: 10.203 Hz\nMost recent transform: 1420716140.924 \nBuffer length: 4.705 sec\n"];
+"camera_link" -> "camera_rgb_frame"[label="Broadcaster: /bigRodent/camera_base_link1\nAverage rate: 10.198 Hz\nMost recent transform: 1420716140.947 \nBuffer length: 4.707 sec\n"];
+"camera_depth_frame" -> "camera_depth_optical_frame"[label="Broadcaster: /bigRodent/camera_base_link2\nAverage rate: 10.195 Hz\nMost recent transform: 1420716140.972 \nBuffer length: 4.708 sec\n"];
+"camera_rgb_frame" -> "camera_rgb_optical_frame"[label="Broadcaster: /bigRodent/camera_base_link3\nAverage rate: 10.198 Hz\nMost recent transform: 1420716140.983 \nBuffer length: 4.707 sec\n"];
+}

@@ -1,0 +1,20 @@
+<package>
+  <description brief="glocalizer">
+
+     glocalizer
+
+  </description>
+  <author>giorgio</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/glocalizer</url>
+  <depend package="roscpp"/>
+  <depend package="rosbag"/>
+  <depend package="tf"/>
+  <depend package="message_filters"/>
+  <depend package="nav_msgs"/>
+  <depend package="std_srvs"/>
+  <!-- depend package="dynamic_reconfigure"/ -->
+</package>
+
+

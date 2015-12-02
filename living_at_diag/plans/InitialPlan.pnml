@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<pnml>
+  <!--generator: JARP 1.2 http://jarp.sourceforge.net/-->
+  <net id="n1" type="PTNet">
+    <name>
+      <value>P/T net</value>
+    </name>
+    <place id="p1">
+      <graphics>
+        <position x="569" y="259" />
+        <size width="32" height="32" />
+      </graphics>
+      <name>
+        <value>goal</value>
+        <graphics>
+          <offset x="25" y="32" />
+        </graphics>
+      </name>
+      <initialMarking>
+        <value>1</value>
+      </initialMarking>
+      <toolspecific tool="JARP" version="1.2">
+        <FrameColor>
+          <value>java.awt.Color[r=0,g=0,b=0]</value>
+        </FrameColor>
+        <FillColor>
+          <value>java.awt.Color[r=255,g=255,b=255]</value>
+        </FillColor>
+      </toolspecific>
+    </place>
+  </net>
+</pnml>
+

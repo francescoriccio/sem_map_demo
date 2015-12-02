@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<semantic_map>
+    <!--Semantic map saved XML file. Coords are already image coordinates.-->
+    <areas />
+    <imposed_areas />
+    <objects>
+        <object name="bed~2015-12-02_17:20:57" x="308" y="353" theta="4,71239" dimX="10" dimY="10" dimZ="0,6" type="1" properties="objectAngle~4.71239" />
+        <object name="bed~2015-12-02_17:21:02" x="328" y="353" theta="4,71239" dimX="0" dimY="0" dimZ="0,6" type="1" properties="objectAngle~4.71239~objImagedata~rgb-19700101010201.png^raw-19700101010201.png^depth-19700101010201.png^laser-19700101010201.png~objLaserdata~laserscan-19700101010201.txt~objSeenFrom~9.57338^1.80593^48.2707~objDotPosition~11.5299^2.85074^3.94573~objColor~yellow~objDimensions~0^0^0.03_" />
+        <object name="bed~2015-12-02_17:22:13" x="368" y="399" theta="1,5708" dimX="16,9213" dimY="8,84053" dimZ="0,6" type="1" properties="objectAngle~1.5708~objImagedata~rgb-19700101010303.png^raw-19700101010303.png^depth-19700101010303.png^laser-19700101010303.png~objLaserdata~laserscan-19700101010303.txt~objSeenFrom~13.7589^2.29239^-86.3995~objDotPosition~13.4921^0.559856^1.67202~objColor~white~objDimensions~0.846067^0.442027^0.03_" />
+    </objects>
+</semantic_map>

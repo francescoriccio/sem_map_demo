@@ -1,0 +1,4 @@
+<launch>
+		<arg name="world" value="$(find emergency_stop)/world/willow-erratic3.world"/>
+		<node pkg="stage" name="stageNode" type="stageros" args="$(arg world)"/>
+</launch>

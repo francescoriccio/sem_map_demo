@@ -1,0 +1,2 @@
+SUBSYSTEMS=="usb", KERNEL=="ttyUSB[0-9]*", ATTRS{manufacturer}=="FTDI", ATTRS{product}=="FT232R USB UART", ATTRS{serial}=="A700f0Q1", MODE="0666", SYMLINK+="robot_devices/erratic"
+

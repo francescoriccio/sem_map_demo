@@ -1,0 +1,10 @@
+prev_objectPos(corridor_bin20150119194729,36,49,0).
+prev_objectType(corridor_bin20150119194729,bin).
+prev_objectLastSeen(corridor_bin20150119194729,2015-01-19-19-47-29).
+prev_objectAngle(corridor_bin20150119194729,270).
+prev_objImagedata(corridor_bin20150119194729,rgb-19700101010044.png^raw-19700101010044.png^depth-19700101010044.png^laser-19700101010044.png).
+prev_objLaserdata(corridor_bin20150119194729,laserscan-19700101010044.txt).
+prev_objSeenFrom(corridor_bin20150119194729,9.57516^2.44464^104.489).
+prev_objDotPosition(corridor_bin20150119194729,9.89299^1.20915^4.44927).
+prev_objColor(corridor_bin20150119194729,blue).
+prev_objDimensions(corridor_bin20150119194729,0.0742857^0.0304762^0.03_).

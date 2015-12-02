@@ -1,0 +1,11 @@
+<launch>
+    <arg name="map_name" default="DIAG_B1"/>
+    <node name="semantic_map_extraction" pkg="semantic_map_extraction" type="semantic_map_extraction" args="0" output="screen">
+        <param name="save_path" type="string" value="$(find semantic_map_extraction)/sem_maps" />
+        <param name="statXMLFilePath" type="string" value="$(find semantic_map_extraction)/XML/mapXMLfile$(arg map_name).xml" />
+        <param name="dynXMLFilePath" type="string" value="$(find semantic_map_extraction)/XML/augmentedMapXMLfile$(arg map_name).xml" />
+        <param name="add_objects_timeout" type="int" value="30" />
+        <param name="wait_prolog_service" type="bool" value="false" />
+        <param name="load_dynamic_map" type="bool" value="true" />
+    </node>
+</launch>

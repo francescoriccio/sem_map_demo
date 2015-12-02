@@ -1,0 +1,8 @@
+string dotFramePath
+string rgbFramePath
+string depthFramePath
+string poseFilePath
+uint8 min_hue
+uint8 max_hue
+---
+bool good

@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<semantic_map>
+    <!--Semantic map saved XML file. Coords are already image coordinates.-->
+    <areas />
+    <imposed_areas>
+        <tag name="corridor" x="67" y="51" />
+        <tag name="corridor" x="66" y="51" />
+    </imposed_areas>
+    <objects>
+        <object name="closet~2015-01-26_17:06:24" x="582" y="401" theta="4.71239" dimX="12.8762" dimY="12.8" dimZ="0.6" type="1" properties="objectAngle~4.71239~objectAngle~4.71239~objImagedata~rgb-20150126170609.png^raw-20150126170609.png^depth-20150126170609.png^laser-20150126170609.png~objLaserdata~laserscan-20150126170609.txt~objSeenFrom~23.6893^2.61922^104.068~objDotPosition~24.2111^0.451535^5.13593~objColor~white~objDimensions~0.643809^0.64^0.03_" />
+        <object name="closet~2015-01-26_17:07:11" x="529" y="396" theta="1.5708" dimX="118.4" dimY="91.7333" dimZ="0.6" type="1" properties="objectAngle~1.5708~objectAngle~1.5708~objImagedata~rgb-20150126170706.png^raw-20150126170706.png^depth-20150126170706.png^laser-20150126170706.png~objLaserdata~laserscan-20150126170706.txt~objSeenFrom~23.7143^2.65063^19.5173~objDotPosition~21.5782^0.697063^2.24684~objColor~white~objDimensions~5.92^4.58667^0.03_" />
+        <object name="fire-extinguisher~2015-01-26_17:36:51" x="440" y="374" theta="4.71239" dimX="40.6857" dimY="48" dimZ="0.6" type="1" properties="objectAngle~4.71239~objImagedata~rgb-20150126173640.png^raw-20150126173640.png^depth-20150126173640.png^laser-20150126173640.png~objLaserdata~laserscan-20150126173640.txt~objSeenFrom~19.7776^2.77879^30.2889~objDotPosition~17.1103^1.79253^4.51465~objColor~white~objDimensions~2.03429^2.4^0.03_" />
+    </objects>
+</semantic_map>

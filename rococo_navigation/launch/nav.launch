@@ -1,0 +1,17 @@
+<launch>
+	<arg name="robot_name" default="robot_0"/>
+	
+	<group ns="$(arg robot_name)">
+	
+		
+	  <node pkg="rococo_navigation" name="turn" type="turn_node" args="-server $(arg robot_name)"  output="screen">
+	    <remap from="cmd_vel" to="desired_cmd_vel" />
+	  </node>
+	  
+	  <node pkg="rococo_navigation" name="follow_corridor" type="follow_corridor_node" args="-server $(arg robot_name)"  output="screen">
+	    <remap from="cmd_vel" to="desired_cmd_vel" />
+	  </node>
+	  
+	</group>
+	
+</launch>

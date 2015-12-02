@@ -1,0 +1,16 @@
+[Config]
+home_x: -3.3
+home_y: 16.85
+home_th: 270.0
+init_x: -1.65
+init_y: 18.25
+init_a: 90.0
+robotport: /dev/ttyUSB0
+laserport: /dev/ttyACM0
+laserport2: /dev/ttyACM2
+joyport: /dev/ttyACM3
+kbenabled: 1
+dotdetectorenabled: 1
+combine_pnpenabled: 0
+loggerenabled: 0
+robotname: bigRodent

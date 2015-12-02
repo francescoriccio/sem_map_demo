@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<semantic_map>
+    <!--Semantic map saved XML file. Coords are already image coordinates.-->
+    <areas />
+    <imposed_areas>
+        <tag name="rococoLab" x="12" y="43" />
+    </imposed_areas>
+    <objects>
+        <object name="bed~2015-01-08_14:26:58" x="111" y="457" theta="1.5708" dimX="3.52457" dimY="3.02526" dimZ="0.6" type="1" properties="objectAngle~1.5708~objectAngle~1.5708~objImagedata~rgb-20150108142653.png^raw-20150108142653.png^depth-20150108142653.png^laser-20150108142653.png~objLaserdata~laserscan-20150108142653.txt~objSeenFrom~-4.76667^16.9142^-84.4756~objDotPosition~-4.42522^13.3796^1.71362~objColor~white~objDimensions~0.176229^0.151263^0.03_" />
+        <object name="heater~2015-01-08_14:32:43" x="247" y="420" theta="1.5708" dimX="0.450362" dimY="0.744076" dimZ="0.6" type="1" properties="objectAngle~1.5708~objImagedata~rgb-20150108143232.png^raw-20150108143232.png^depth-20150108143232.png^laser-20150108143232.png~objLaserdata~laserscan-20150108143232.txt~objSeenFrom~1.37401^16.4966^-51.932~objDotPosition~2.3528^15.2473^1.44864~objColor~white~objDimensions~0.0225181^0.0372038^0.03_" />
+    </objects>
+</semantic_map>

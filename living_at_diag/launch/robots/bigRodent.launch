@@ -1,0 +1,79 @@
+<launch>
+    <!-- Launch this file through the gui in living_at_diag/scripts/launcher.py -->
+    
+    <arg name="map_name"  default="lisboa_ven.yaml"/>
+    <arg name="robot_name" default="bigRodent"/>
+    <arg name="init_x" default="16.46" />
+    <arg name="init_y" default="12.03" />
+    <arg name="init_a" default="-3.099" />
+    <arg name="init_cov" default="0.25" />
+    <arg name="robotPort" default="/dev/ttyUSB0"/>
+    <!--arg name="laser_port" default="/dev/ttyACM0"/-->
+    <!--arg name="joyPort" default="/dev/ttyACM3"/-->    
+    <arg name="laser_port" 	 default="/dev/sensors/hokuyo"/> 
+    <arg name="laser_id"         default="0"/> 
+    <arg name="scan_topic" 	 default="scan"/> 
+    <arg name="odom_topic" 	 default="odom"/> 
+    <arg name="laser_frame_id" default="laser"/>     
+    <!--arg name="home_x" default="8.0" />
+    <arg name="home_y" default="2.0" />
+    <arg name="home_th" default="0.0" />
+    
+    <param name="/home_x" value="$(arg home_x)"/> 
+    <param name="/home_y" value="$(arg home_y)"/> 
+    <param name="/home_th" value="$(arg home_th)"/--> 
+    <param name="robot_name" value="$(arg robot_name)"/>
+    
+    <!--LOAD MAP>
+    <include file="$(find sapienzbot_setup)/launch/navigation/map_server.launch">
+      <arg name="map_file" value="$(arg map_name)" />
+    </include-->
+    
+    <!--group ns="$(arg robot_name)"-->
+	<param name="robot_name" value="$(arg robot_name)" />
+	<remap from="cmd_vel" to ="desired_cmd_vel" />
+
+	<!--LOAD AMCL-->
+	<include file="$(find sapienzbot_setup)/launch/navigation/amcl.launch">
+		<arg name="initial_pose_x"  value="$(arg init_x)"/>
+    		<arg name="initial_pose_y"  value="$(arg init_y)"/>
+    		<arg name="initial_pose_a"  value="$(arg init_a)"/>
+    		<arg name="scan_topic"      value="$(arg scan_topic)"/>
+    		<arg name="odom_frame_id"   value="$(arg odom_topic)"/>
+    		<arg name="global_frame_id" value="map"/>
+  	</include>
+
+
+	
+	<include file="$(find sapienzbot_setup)/launch/base/base.launch">
+    		<arg name="serial_port"       		value="$(arg robotPort)"/>
+    		<arg name="robot_name"       		value="$(arg robot_name)"/>
+		<arg name="subscribed_cmdvel_topic"     value="$(arg robot_name)/cmd_vel" />
+    		<!--arg name="odom_frame_id"       		value="$(arg odom_frame_id)"/-->
+    		<!--arg name="base_frame_id"       		value="$(arg base_frame_id)"/-->
+    		<arg name="odom_topic"       		value="$(arg odom_topic)"/>
+  	</include>
+
+	<include file="$(find sapienzbot_setup)/launch/base/sensor_laser.launch">
+		<arg name="scan_topic"      value="$(arg scan_topic)"/>
+		<arg name="laser_frame_id"  value="$(arg laser_frame_id)"/>
+  	</include>	
+
+	<!--LOAD UNA COSA CHE NON MI PIACE-->
+	<!--node pkg="laser_analysis" type="laserobstacle" args=""  name="laserobstacle" output="screen">
+            <param name="~laser_frame_id" value="$(arg robot_name)/laser" />
+        </node-->
+
+        <!--LOAD BROADCASTERS-->
+	<!--	node name="link_broadcaster_0" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 /$(arg robot_name)/base_footprint /$(arg robot_name)/base_link 1" /-->
+	<node name="link_broadcaster_1" pkg="tf" type="static_transform_publisher" args="0.2 0 0.24 0 0 0 /base_link /laser 1" />
+        <node name="link_broadcaster_2" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 /base_link /base_frame 1" />
+        <node name="link_broadcaster_3" pkg="tf" type="static_transform_publisher" args="-0.2 0 0.24 0 -0.698 3.14 /laser /top_link 1" />
+        <node name="link_broadcaster_4" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 /top_link /camera_link 1" />
+
+	
+	<!--node pkg="emergency_stop" name="emerg" type="emergency_stop" args="-gui" output="screen"/-->
+    <!--/group--> 
+
+
+</launch>

@@ -1,0 +1,16 @@
+<launch>
+
+  <arg name="robotname" default="robot_0" />
+
+  <group ns="$(arg robotname)">
+    <param name="robot_name" value="$(arg robotname)" />
+    <param name="tf_prefix" value="$(arg robotname)" />
+    
+    <node pkg="laser_analysis" name="laserobstacle" type="laserobstacle" args="-gui"  output="screen">
+	<!-- remap from="scan" to="/$(arg robotname)/scan" / -->
+	<param name="laser_frame_id" value="/$(arg robotname)/base_laser_link" />
+    </node>
+      
+  </group>
+  
+</launch>

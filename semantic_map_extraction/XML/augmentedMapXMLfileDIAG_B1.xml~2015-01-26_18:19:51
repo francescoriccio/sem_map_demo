@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<semantic_map>
+    <!--Semantic map saved XML file. Coords are already image coordinates.-->
+    <areas />
+    <imposed_areas />
+    <objects>
+        <object name="closet~2015-01-26_18:18:24" x="370" y="336" theta="1.5708" dimX="4.15238" dimY="5.02857" dimZ="0.6" type="1" properties="objectAngle~1.5708~objImagedata~rgb-19700101010033.png^raw-19700101010033.png^depth-19700101010033.png^laser-19700101010033.png~objLaserdata~laserscan-19700101010033.txt~objSeenFrom~13.9684^2.51924^-73.3104~objDotPosition~13.6301^3.69597^1.34384~objColor~white~objDimensions~0.207619^0.251429^0.03_" />
+        <object name="bench~2015-01-26_18:19:49" x="391" y="335" theta="3.14159" dimX="4.15238" dimY="10.6286" dimZ="0.6" type="1" properties="objectAngle~3.14159~objImagedata~rgb-19700101010216.png^raw-19700101010216.png^depth-19700101010216.png^laser-19700101010216.png~objLaserdata~laserscan-19700101010216.txt~objSeenFrom~13.9684^2.51924^-73.3104~objDotPosition~14.6457^3.73446^3.10164~objColor~white~objDimensions~0.207619^0.531429^0.03_" />
+    </objects>
+</semantic_map>

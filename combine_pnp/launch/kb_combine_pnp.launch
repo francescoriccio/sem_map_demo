@@ -1,0 +1,20 @@
+<launch>	
+	<master auto="start"/>
+        <!--arg name="plans_folder_path"  default="$(find LivingAtDIAG)/plans"/-->
+        <arg name="plans_folder_path"  default="~/Desktop"/>
+        <!--arg name="prolog_folder_path"  default="$(find SapienzBotReasoning)/pl"/-->
+        <arg name="prolog_folder_path"  default="~/Desktop"/>
+
+        <node pkg="combine_pnp" name="combine_pnp_server" type="combine_pnp_server.py" output="screen">
+          <param name="plans_folder_path" value="$(arg plans_folder_path)"/>
+          <param name="prolog_folder_path" value="$(arg prolog_folder_path)"/>
+        </node>
+        
+        <node pkg="prolog_interface" type="prolog_interface" name="prolog_interface" output="screen">
+          <param name="prolog_binary" value="/usr/lib/swi-prolog/bin/amd64" type="str"/> 
+          <param name="prolog_path" value="/home/guglielmo/ros_workspace/groovy/SapienzBotReasoning/pl" type="str"/>  
+          <param name="prolog_file_1" value="plans.pl" type="str"/> 
+        </node> 
+        
+        <node pkg="combine_pnp" name="tester" type="tester.py" output="screen"></node>
+</launch>

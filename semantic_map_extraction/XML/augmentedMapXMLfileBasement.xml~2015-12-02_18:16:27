@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<semantic_map>
+    <!--Semantic map saved XML file. Coords are already image coordinates.-->
+    <areas />
+    <imposed_areas />
+    <objects>
+        <object name="fridge~2015-12-02_18:16:26" x="267" y="419" theta="3,14159" dimX="0" dimY="0" dimZ="0,6" type="1" properties="objectAngle~3.14159~objImagedata~rgb-20151202181618.png^raw-20151202181618.png^depth-20151202181618.png^laser-20151202181618.png~objLaserdata~laserscan-20151202181618.txt~objSeenFrom~-0.844961^17.1321^-49.629~objDotPosition~3.36405^15.2726^3.29991~objColor~yellow~objDimensions~0^0^0.03_" />
+    </objects>
+</semantic_map>

@@ -1,0 +1,8 @@
+string dotFramePath
+string rgbFramePath
+string depthFramePath
+string poseFilePath
+---
+string objColor
+string possibleObjTag
+float32[] objDimensions

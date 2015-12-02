@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<semantic_map>
+    <!--Semantic map saved XML file. Coords are already image coordinates.-->
+    <areas />
+    <imposed_areas />
+    <objects>
+        <object name="hydrant~2015-01-19_19:39:48" x="297" y="385" theta="4.71239" dimX="0.647619" dimY="0.152381" dimZ="0.6" type="1" properties="objectAngle~4.71239~objImagedata~rgb-19700101010031.png^raw-19700101010031.png^depth-19700101010031.png^laser-19700101010031.png~objLaserdata~laserscan-19700101010031.txt~objSeenFrom~9.59185^2.45526^106.475~objDotPosition~9.95145^1.23357^4.16275~objColor~black~objDimensions~0.032381^0.00761905^0.03_" />
+    </objects>
+</semantic_map>

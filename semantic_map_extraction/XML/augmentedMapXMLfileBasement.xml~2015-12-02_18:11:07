@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<semantic_map>
+    <!--Semantic map saved XML file. Coords are already image coordinates.-->
+    <areas />
+    <imposed_areas>
+        <tag name="rococoLab" x="12" y="43" />
+        <tag name="rococoLab" x="22" y="32" />
+    </imposed_areas>
+    <objects>
+        <object name="bed~2015-01-08_14:26:58" x="111" y="457" theta="1,5708" dimX="3,52457" dimY="3,02526" dimZ="0,6" type="1" properties="objectAngle~1.5708~objectAngle~1.5708~objectAngle~1.5708~objectAngle~1.5708~objImagedata~rgb-20150108142653.png^raw-20150108142653.png^depth-20150108142653.png^laser-20150108142653.png~objLaserdata~laserscan-20150108142653.txt~objSeenFrom~-4.76667^16.9142^-84.4756~objDotPosition~-4.42522^13.3796^1.71362~objColor~white~objDimensions~0.176229^0.151263^0.03_" />
+        <object name="heater~2015-01-08_14:32:43" x="247" y="420" theta="1,5708" dimX="0,450362" dimY="0,744076" dimZ="0,6" type="1" properties="objectAngle~1.5708~objectAngle~1.5708~objectAngle~1.5708~objImagedata~rgb-20150108143232.png^raw-20150108143232.png^depth-20150108143232.png^laser-20150108143232.png~objLaserdata~laserscan-20150108143232.txt~objSeenFrom~1.37401^16.4966^-51.932~objDotPosition~2.3528^15.2473^1.44864~objColor~white~objDimensions~0.0225181^0.0372038^0.03_" />
+        <object name="bench~2015-01-08_14:49:26" x="251" y="426" theta="3,14159" dimX="0,881143" dimY="5,19874" dimZ="0,6" type="1" properties="objectAngle~3.14159~objectAngle~3.14159~objImagedata~rgb-20150108144910.png^raw-20150108144910.png^depth-20150108144910.png^laser-20150108144910.png~objLaserdata~laserscan-20150108144910.txt~objSeenFrom~1.34456^16.4817^-51.7741~objDotPosition~2.57965^14.915^3.75003~objColor~white~objDimensions~0.0440571^0.259937^0.03_" />
+        <object name="Label~2015-12-02_18:11:07" x="199" y="355" theta="4,71239" dimX="9,4016" dimY="30,7008" dimZ="0,6" type="1" properties="objectAngle~4.71239~objImagedata~rgb-20151202181050.png^raw-20151202181050.png^depth-20151202181050.png^laser-20151202181050.png~objLaserdata~laserscan-20151202181050.txt~objSeenFrom~-1.34716^16.6876^64.5805~objDotPosition~-0.0150966^18.4572^5.56829~objColor~white~objDimensions~0.47008^1.53504^0.03_" />
+    </objects>
+</semantic_map>

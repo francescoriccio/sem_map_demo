@@ -1,0 +1,13 @@
+# Goal
+# target position 
+float32 target_X
+float32 target_Y
+# max velocity [m/s]
+float32 max_vel
+---
+# Result
+string result
+---
+# Feedback
+string feedback
+

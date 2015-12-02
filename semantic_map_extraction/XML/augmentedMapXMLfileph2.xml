@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<semantic_map>
+    <!--Semantic map saved XML file. Coords are already image coordinates.-->
+    <areas />
+    <imposed_areas>
+        <tag name="living_room" x="16" y="13" />
+    </imposed_areas>
+    <objects>
+        <object name="bed~2013-12-05_17:54:23" x="205" y="143" theta="4.71239" dimX="0.2" dimY="0.2" dimZ="0.2" type="1" properties="" />
+        <object name="couch~2013-12-05_17:54:44" x="205" y="143" theta="4.71239" dimX="0.2" dimY="0.2" dimZ="0.2" type="1" properties="" />
+        <object name="bed~2013-12-05_17:55:52" x="129" y="137" theta="4.71239" dimX="0.2" dimY="0.2" dimZ="0.2" type="1" properties="" />
+        <object name="heater~2013-12-05_17:56:08" x="129" y="137" theta="4.71239" dimX="0.2" dimY="0.2" dimZ="0.2" type="1" properties="" />
+    </objects>
+</semantic_map>

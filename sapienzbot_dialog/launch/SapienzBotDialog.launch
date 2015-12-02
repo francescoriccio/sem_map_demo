@@ -1,0 +1,7 @@
+<launch>	
+	<node pkg="sapienzbot_dialog" name="sapienzbot_dialog_node" type="sapienzbot_dialog_node.py" output="screen"/>
+        <node pkg="sapienzbot_dialog" name="tester" type="tester.py" output="screen">
+          <param name="sapienzbot_dialogPath" value="$(find sapienzbot_dialog)"/>
+        </node>
+        <node pkg="sapienzbot_dialog" name="queryLoop" type="queryLoop.py" output="screen"/>
+</launch>

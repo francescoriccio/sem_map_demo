@@ -1,0 +1,3 @@
+<launch>
+	<node name="objects_processing" pkg="objects_processing" type="objects_processing" args="0" output="screen" />
+</launch>

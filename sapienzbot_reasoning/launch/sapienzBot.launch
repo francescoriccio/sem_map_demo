@@ -1,0 +1,15 @@
+<launch>
+    <node pkg="prolog_interface" type="prolog_interface" name="prolog_interface" output="screen">
+        <param name="prolog_binary" value="/usr/lib/swi-prolog/bin/i386" type="str"/> 
+        <param name="prolog_path" value="$(find sapienzbot_reasoning)/pl"/>
+    </node> 
+    
+    <node pkg="sapienzbot_reasoning" name="knowledge_generator" type="knowledge_generator.py" output="screen">
+        <param name="prolog_path" value="$(find sapienzbot_reasoning)/pl"/>
+    </node>
+    
+    <node pkg="sapienzbot_reasoning" name="goto_grounding" type="goto_grounding.py" output="screen"></node>
+    <node pkg="sapienzbot_reasoning" name="atom_grounding" type="atom_grounding.py" output="screen"></node>
+    <node pkg="sapienzbot_reasoning" name="objInSight_grounding" type="objInSight_grounding.py" output="screen"></node>
+    <node pkg="sapienzbot_reasoning" name="condition_evaluator" type="condition_evaluator.py" output="screen"></node>
+</launch>

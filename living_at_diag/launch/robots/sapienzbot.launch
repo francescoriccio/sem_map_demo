@@ -1,0 +1,56 @@
+<launch>
+    <arg name="robot_name" default="sapienzbot"/>
+    <arg name="init_x" default="11.2" />
+    <arg name="init_y" default="2.4" />
+    <arg name="init_a" default="-1.57" />
+    <arg name="init_cov" default="0.25" />
+    <arg name="robotPort" default="/dev/erratic" />
+    <arg name="laserPort" default="/dev/ttyACM3"  />
+    <arg name="laserPort2"/>
+    <arg name="joyPort" default="/dev/input/js0"/>
+
+    <param name="robotname" value="$(arg robot_name)" />
+
+    <include file="$(find dis_robots)/launch/sapienzbot.launch">
+        <arg name="robot_name" value="$(arg robot_name)"/> 
+        <arg name="robotPort" value="$(arg robotPort)"/> 
+        <arg name="laserPort" value="$(arg laserPort)"/> 
+    </include> 
+
+    <group ns="$(arg robot_name)">
+        <param name="tf_prefix" value="$(arg robot_name)" />
+        <param name="emergency_stop" type="int" value="0" />
+        
+        <remap from="base_scan" to="front_scan" />
+        <remap from="scan" to="front_scan" />
+        
+        <include file="$(find living_at_diag)/config/localization/glocalizer_node.xml" />
+            <param name="glocalizer/initial_pose_x" value="$(arg init_x)" />
+            <param name="glocalizer/initial_pose_y" value="$(arg init_y)" />
+            <param name="glocalizer/initial_pose_a" value="$(arg init_a)" />
+            <param name="glocalizer/initial_cov_xx" value="$(arg init_cov)" />
+            <param name="glocalizer/initial_cov_yy" value="$(arg init_cov)" />
+            <param name="glocalizer/initial_cov_aa" value="$(arg init_cov)" />
+        
+        <node pkg="tf" type="static_transform_publisher" name="link_broadcaster_0" args="0 0 0 0 0 0 /map /$(arg robot_name)/map 100" />
+
+        <node pkg="living_at_diag" name="robotpose_srv" type="getpose" args="-srv" output="screen"/>
+
+        <node pkg="emergency_stop" name="emerg" type="emergency_stop" args="-gui" output="screen"/>
+
+        <node pkg="laser_analysis" type="laserobstacle" args="-gui"  name="laserobstacle" output="screen">
+            <param name="~laser_frame_id" value="front_laser_frame" />
+        </node>
+
+        <node name="joy_node" pkg="joy" type="joy_node" output="screen" >
+            <param name="~deadzone" type="double" value="0.2"/> 
+            <param name="~autorepeat_rate" type="double" value="20."/> 
+            <param name="~dev" type="str" value="$(arg joyPort)"/>  
+        </node>
+
+        <node name="joy2twist" pkg="human_interface" type="joy2twist.py" output="screen" >
+            <remap from="cmd_vel" to ="desired_cmd_vel" />
+        </node>
+
+    </group>
+</launch>

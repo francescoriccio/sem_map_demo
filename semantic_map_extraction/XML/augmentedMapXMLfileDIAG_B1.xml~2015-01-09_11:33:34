@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<semantic_map>
+    <!--Semantic map saved XML file. Coords are already image coordinates.-->
+    <areas />
+    <imposed_areas>
+        <tag name="corridor" x="39" y="51" />
+    </imposed_areas>
+    <objects>
+        <object name="closet~2015-01-09_11:04:35" x="367" y="398" theta="1.5708" dimX="0.714705" dimY="0.254552" dimZ="0.6" type="1" properties="objectAngle~1.5708~objectAngle~1.5708~objImagedata~rgb-20150109110419.png^raw-20150109110419.png^depth-20150109110419.png^laser-20150109110419.png~objLaserdata~laserscan-20150109110419.txt~objSeenFrom~13.0394^2.00611^-72.4537~objDotPosition~13.4861^0.591988^2.23615~objColor~white~objDimensions~0.0357352^0.0127276^0.03_" />
+        <object name="closet~2015-01-09_11:06:02" x="454" y="391" theta="3.14159" dimX="4.85608" dimY="6.77501" dimZ="0.6" type="1" properties="objectAngle~3.14159~objectAngle~3.14159~objImagedata~rgb-20150109110554.png^raw-20150109110554.png^depth-20150109110554.png^laser-20150109110554.png~objLaserdata~laserscan-20150109110554.txt~objSeenFrom~16.4387^2.18319^-41.2744~objDotPosition~17.8197^0.970227^3.21797~objColor~white~objDimensions~0.242804^0.33875^0.03_" />
+        <object name="closet~2015-01-09_11:33:31" x="316" y="401" theta="1.5708" dimX="3.73996" dimY="4.03368" dimZ="0.6" type="1" properties="objectAngle~1.5708~objImagedata~rgb-20150109113319.png^raw-20150109113319.png^depth-20150109113319.png^laser-20150109113319.png~objLaserdata~laserscan-20150109113319.txt~objSeenFrom~11.1855^2.18441^-98.4618~objDotPosition~10.9314^0.479244^1.62899~objColor~white~objDimensions~0.186998^0.201684^0.03_" />
+    </objects>
+</semantic_map>

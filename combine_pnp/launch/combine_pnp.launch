@@ -1,0 +1,11 @@
+<launch>	
+	<master auto="start"/>
+        <arg name="plans_folder_path"  default="$(find living_at_diag)/plans"/>
+        <arg name="prolog_folder_path"  default="$(find sapienzbot_reasoning)/pl"/>
+
+        <node pkg="combine_pnp" name="combine_pnp_server" type="combine_pnp_server.py" output="screen">
+                <param name="plans_folder_path" value="$(arg plans_folder_path)"/>
+                <param name="prolog_folder_path" value="$(arg prolog_folder_path)"/>
+        </node>
+        
+</launch>

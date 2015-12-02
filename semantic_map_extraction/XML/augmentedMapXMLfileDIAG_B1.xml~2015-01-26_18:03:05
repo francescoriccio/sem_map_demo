@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<semantic_map>
+    <!--Semantic map saved XML file. Coords are already image coordinates.-->
+    <areas />
+    <imposed_areas>
+        <tag name="corridor" x="47" y="38" />
+        <tag name="corridor" x="45" y="39" />
+        <tag name="corridor" x="46" y="39" />
+        <tag name="corridor" x="42" y="40" />
+        <tag name="corridor" x="41" y="40" />
+        <tag name="corridor" x="41" y="39" />
+        <tag name="corridor" x="42" y="39" />
+    </imposed_areas>
+    <objects>
+        <object name="exit~2015-01-26_17:59:24" x="389" y="303" theta="1.5708" dimX="5.79048" dimY="21.3333" dimZ="0.6" type="1" properties="objectAngle~1.5708~objImagedata~rgb-19700101010057.png^raw-19700101010057.png^depth-19700101010057.png^laser-19700101010057.png~objLaserdata~laserscan-19700101010057.txt~objSeenFrom~13.9835^2.51989^-74.9916~objDotPosition~14.5599^5.34657^1.28633~objColor~white~objDimensions~0.289524^1.06667^0.03_" />
+        <object name="socket~2015-01-26_18:01:22" x="374" y="313" theta="1.5708" dimX="5.48571" dimY="20.5714" dimZ="0.6" type="1" properties="objectAngle~1.5708~objImagedata~rgb-19700101010259.png^raw-19700101010259.png^depth-19700101010259.png^laser-19700101010259.png~objLaserdata~laserscan-19700101010259.txt~objSeenFrom~13.9835^2.51989^-74.9916~objDotPosition~13.7979^4.85784^1.28638~objColor~white~objDimensions~0.274286^1.02857^0.03_" />
+        <object name="bench~2015-01-26_18:03:03" x="341" y="315" theta="3.14159" dimX="4.60952" dimY="0.8" dimZ="0.6" type="1" properties="objectAngle~3.14159~objImagedata~rgb-19700101010440.png^raw-19700101010440.png^depth-19700101010440.png^laser-19700101010440.png~objLaserdata~laserscan-19700101010440.txt~objSeenFrom~13.9835^2.51989^-74.9916~objDotPosition~12.1796^4.73312^2.93076~objColor~white~objDimensions~0.230476^0.04^0.03_" />
+    </objects>
+</semantic_map>

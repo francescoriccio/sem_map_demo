@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<semantic_map>
+    <!--Semantic map saved XML file. Coords are already image coordinates.-->
+    <areas />
+    <imposed_areas />
+    <objects>
+        <object name="fire-extinguisher~2015-11-30_19:24:51" x="411" y="356" theta="3,14159" dimX="9,97413" dimY="2,648" dimZ="0,6" type="1" properties="objectAngle~3.14159~objImagedata~rgb-19700101010108.png^raw-19700101010108.png^depth-19700101010108.png^laser-19700101010108.png~objLaserdata~laserscan-19700101010108.txt~objSeenFrom~13.9658^2.30157^-21.5795~objDotPosition~15.656^2.73126^2.99088~objColor~white~objDimensions~0.498707^0.1324^0.03_" />
+    </objects>
+</semantic_map>
