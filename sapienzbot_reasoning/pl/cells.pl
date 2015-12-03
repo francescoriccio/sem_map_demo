@@ -348,7 +348,6 @@ cellCoordIsPartOf(17,32,rococoLab).
 cellCoordIsPartOf(18,32,rococoLab).
 cellCoordIsPartOf(19,32,rococoLab).
 cellCoordIsPartOf(20,32,rococoLab).
-cellCoordIsPartOf(22,32,rococoLab).
 cellCoordIsPartOf(24,32,corridor).
 cellCoordIsPartOf(25,32,corridor).
 cellCoordIsPartOf(26,32,corridor).
@@ -365,7 +364,6 @@ cellCoordIsPartOf(17,33,rococoLab).
 cellCoordIsPartOf(18,33,rococoLab).
 cellCoordIsPartOf(19,33,rococoLab).
 cellCoordIsPartOf(20,33,rococoLab).
-cellCoordIsPartOf(21,33,rococoLab).
 cellCoordIsPartOf(23,33,corridor).
 cellCoordIsPartOf(24,33,corridor).
 cellCoordIsPartOf(25,33,corridor).
@@ -499,6 +497,7 @@ cellCoordIsPartOf(15,40,rococoLab).
 cellCoordIsPartOf(16,40,rococoLab).
 cellCoordIsPartOf(17,40,rococoLab).
 cellCoordIsPartOf(18,40,rococoLab).
+cellCoordIsPartOf(23,40,corridor).
 cellCoordIsPartOf(24,40,corridor).
 cellCoordIsPartOf(25,40,corridor).
 cellCoordIsPartOf(26,40,corridor).
@@ -543,7 +542,6 @@ cellCoordIsPartOf(29,42,corridor).
 cellCoordIsPartOf(9,43,rococoLab).
 cellCoordIsPartOf(10,43,rococoLab).
 cellCoordIsPartOf(11,43,rococoLab).
-cellCoordIsPartOf(12,43,rococoLab).
 cellCoordIsPartOf(14,43,rococoLab).
 cellCoordIsPartOf(15,43,rococoLab).
 cellCoordIsPartOf(17,43,rococoLab).

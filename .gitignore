@@ -1,1 +1,3 @@
-/home/sapienzbot/sapienzbot_ws/src/sem_map_demo/dot_detector/images_log/*
+dot_detector/images_log/*
+semantic_map_extraction/sem_maps/*
+sapienzbot_reasoning/pl/logged_pl/*

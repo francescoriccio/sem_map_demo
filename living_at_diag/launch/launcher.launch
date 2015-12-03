@@ -1,9 +1,9 @@
 <launch>
 	<arg name="map_name"  default="DIAG_B1"/>
-	<arg name="map_file"  default="/home/sapienzbot/sapienzbot_ws/src/living_at_diag/maps/$(arg map_name).yaml"/>
+	<arg name="map_file"  default="/home/sapienzbot/sapienzbot_ws/src/sem_map_demo/living_at_diag/maps/$(arg map_name).yaml"/>
 	<arg name="robot_name" default="robot0"/>
 	<arg name="plan_name" default="LivingAtDIAG" />
-	<arg name="simulation" default="true"/>
+	<arg name="simulation" default="false"/>
 	<arg name="pnpas" default="living_at_diag_as" />
 	<arg name="init_x" default="-3,854" />   
 	<arg name="init_y" default="16,527" />

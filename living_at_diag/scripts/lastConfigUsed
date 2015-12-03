@@ -1,10 +1,10 @@
 [Config]
-home_x: -3.3
-home_y: 16.85
-home_th: 270.0
-init_x: -1.65
-init_y: 18.25
-init_a: 90.0
+home_x: -1.6
+home_y: 17.4
+home_th: 250
+init_x: -1.7
+init_y: 17.85
+init_a: 310
 robotport: /dev/ttyUSB0
 laserport: /dev/ttyACM0
 laserport2: /dev/ttyACM2
