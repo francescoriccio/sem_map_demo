@@ -44,3 +44,6 @@ basicPlan(pickUp).
 basicPlan(drop).
 basicPlan(sendEmail).
 
+combinedPlan(testPlan).
+plan(testPlan,[x,mandrillone,qualcosa],[]).
+pcl(testPlan,'( do-sequentially ( say:[@X] ) ( pickUp:[@Mandrillone] ) ( drop:[@Qualcosa] ) )').

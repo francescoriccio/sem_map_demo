@@ -1,2 +1,33 @@
 
 anyone
+
+I am going to teach you a bring task
+
+LearnPlan
+
+lanName_testn1_[X, Y, O]
+PlanName_testn1_[X, Y, O]
+PlanName_testPlan_[X, Mandrillone, Qualcosa]
+PlanName_testn1_[X, Y, O]
+PlanName_testPlan_[X, Mandrillone, Qualcosa]
+( do-sequentially ( say:[@X] ) ( pickUp:[@Mandrillone]) )
+LearnPlan
+PlanName_testPlan_[X, Mandrillone, Qualcosa]
+PlanName_testPlan_[X,Mandrillone,Qualcosa]
+turn_right
+LearnPlan
+PlanNamed_testPlan_[X, Mandrillone, Qualcosa
+
+( do-sequentially ( say:[@X] ) ( pickUp:[@Mandrillone]) )
+PCL: ( do-sequentially ( say:[@X] ) ( pickUp:[@Mandrillone] ) )
+yes
+PCL: ( drop:[@Qualcosa] )
+Testplan_bla_nonso_ciccio
+Testplan_bla_nonso_ciccio
+Ttstplan_bla_nonso_ciccio
+testplan_bla_nonso_ciccio
+Testplan_bla_nonso_ciccio
+Testplan_bla_nonso_ciccio
+Testplan_bla_nonso_ciccio
+[TestPlan_jesus_madonna_dio]
+TestPlan_jesus_madonna_dio

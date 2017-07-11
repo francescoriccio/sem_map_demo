@@ -6,6 +6,5 @@
     <objects>
         <object name="freezer~2015-12-03_14:20:06" x="383" y="355" theta="3,14159" dimX="66" dimY="6" dimZ="0" type="1" properties="objectAngle~3.14159~objectAngle~3.14159~objImagedata~rgb-19700101010154.png^raw-19700101010154.png^depth-19700101010154.png^laser-19700101010154.png~objLaserdata~laserscan-19700101010154.txt~objSeenFrom~10.7043^2.55506^-0.18014~objDotPosition~14.2401^2.73503^3.82415~objColor~white~objDimensions~3.30997^0.336453^0.03_" />
         <object name="bin~2015-12-16_18:39:01" x="320" y="370" theta="4,71239" dimX="0" dimY="0" dimZ="0,6" type="1" properties="objectAngle~4.71239~objImagedata~rgb-19700101010153.png^raw-19700101010153.png^depth-19700101010153.png^laser-19700101010153.png~objLaserdata~laserscan-19700101010153.txt~objSeenFrom~9.84653^2.40874^-2.00064~objDotPosition~11.1002^2.02216^3.93566~objColor~yellow~objDimensions~0^0^0.03_" />
-        <object name="bin~2015-12-16_18:43:59" x="341" y="361" theta="4,71239" dimX="5,34034" dimY="4,00526" dimZ="0,6" type="1" properties="objectAngle~4.71239~objImagedata~rgb-19700101010650.png^raw-19700101010650.png^depth-19700101010650.png^laser-19700101010650.png~objLaserdata~laserscan-19700101010650.txt~objSeenFrom~10.7318^2.42759^-1.99821e-13~objDotPosition~12.1854^2.45152^4.02813~objColor~white~objDimensions~0.267017^0.200263^0.03_" />
     </objects>
 </semantic_map>

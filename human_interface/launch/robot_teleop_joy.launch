@@ -6,6 +6,6 @@
 		<param name="~dev" type="str" value="/dev/input/js0"/>	
     </node>
     <node name="joy2twist" pkg="human_interface" type="joy2twist.py" output="screen" >
-	    <!--remap from="/cmd_vel" to ="/robot_0/cmd_vel"/-->
+	    <remap from="/cmd_vel" to ="/robot1/cmd_vel"/>
     </node>
 </launch>

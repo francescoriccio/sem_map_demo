@@ -85,23 +85,25 @@ dotDetector::dotDetector()
   //top kinect
   top_rgb_sub_ok = false;
   //top_rgbSub.subscribe(handle, top_camera_name+"/rgb/image_rect_color", 1);
-	string top_rgb_sub_string = top_camera_name+"/rgb/image_rect_color";
+//	string top_rgb_sub_string = top_camera_name+"/rgb/image_rect_color";
+  string top_rgb_sub_string = top_camera_name+"/camera_middle/rgb/image_raw"; // with bananas
   top_rgbSub=handle.subscribe(top_rgb_sub_string, 1, &dotDetector::top_rgb_callback, this);
 	ROS_INFO("top_rgb_subscription_string = %s", top_rgb_sub_string.c_str()); 
   //top_depthSub.subscribe(handle, top_camera_name+"/depth_registered/image_rect_raw", 1);
 
   top_depth_sub_ok = false;
-	string top_depth_sub_string = top_camera_name+"/depth_registered/image_raw"; //Raw image from device. Contains uint16 depths in mm. 
+	//string top_depth_sub_string = top_camera_name+"/depth_registered/image_raw"; //Raw image from device. Contains uint16 depths in mm. 
+  string top_depth_sub_string = top_camera_name+"/camera_middle/depth/image_raw"; // with bananas
   top_depthSub= handle.subscribe(top_depth_sub_string, 1, &dotDetector::top_depth_callback, this);
 	ROS_INFO("top_depth_subscription_string = %s", top_depth_sub_string.c_str()); 
 
   
   //bottom kinect
   bottom_sub_ok = false;
-  bottom_rgbSub.subscribe(handle, bottom_camera_name+"/rgb/image_rect_color", 1);
-  bottom_depthSub.subscribe(handle, bottom_camera_name+"/depth_registered/image_rect_raw", 1);
-  Synchronizer<MySyncPolicy> bottom_sync(MySyncPolicy(10), bottom_rgbSub, bottom_depthSub);
-  bottom_sync.registerCallback(boost::bind(&dotDetector::bottom_callback, this, _1, _2));
+  //bottom_rgbSub.subscribe(handle, bottom_camera_name+"/rgb/image_rect_color", 1);
+  //bottom_depthSub.subscribe(handle, bottom_camera_name+"/depth_registered/image_rect_raw", 1);
+  //Synchronizer<MySyncPolicy> bottom_sync(MySyncPolicy(10), bottom_rgbSub, bottom_depthSub);
+  //bottom_sync.registerCallback(boost::bind(&dotDetector::bottom_callback, this, _1, _2));
 
     
   if(bottom_sub_ok) {
@@ -285,6 +287,7 @@ void dotDetector::top_rgb_callback(const sensor_msgs::ImageConstPtr& rgb)
     top_rgb_camera_mutex.lock();
     cv_ptr_rgb->image.copyTo(top_rgbMat);
     top_rgb_camera_mutex.unlock();
+
   }
 }
 

@@ -3,7 +3,7 @@
 	<arg name="map_file"  default="/home/sapienzbot/sapienzbot_ws/src/sem_map_demo/living_at_diag/maps/$(arg map_name).yaml"/>
 	<arg name="robot_name" default="robot0"/>
 	<arg name="plan_name" default="LivingAtDIAG" />
-	<arg name="simulation" default="false"/>
+	<arg name="simulation" default="true"/>
 	<arg name="pnpas" default="living_at_diag_as" />
 	<arg name="init_x" default="-3,854" />   
 	<arg name="init_y" default="16,527" />
@@ -53,6 +53,7 @@
 			  <node name="link_broadcaster_2" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 /$(arg robot_name)/base_link /$(arg robot_name)/base_frame 1"/>
 			  <node name="link_broadcaster_laser_frame" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 /$(arg robot_name)/laser_frame /$(arg robot_name)/laser 1"/>
 		  </group>
+    </group>
 	
 
 	  <include file="$(find living_at_diag)/launch/pnpas.launch">
@@ -63,5 +64,5 @@
 	  </include>
 
 	  <include file="$(find sapienzbot_dialog)/launch/SapienzBotDialog.launch"/>
-  </group>
+  <!--/group-->
 </launch>
